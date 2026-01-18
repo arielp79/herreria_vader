@@ -1,0 +1,312 @@
+/* GENERALES */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+body { background-color: #f8f9fa; color: #333; line-height: 1.6; scroll-behavior: smooth; overflow-x: hidden; }
+
+/* HEADER Y NAV */
+header { background-color: #393939; padding: 10px 0; width: 100%; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+nav { display: flex; justify-content: space-around; align-items: center; max-width: 1200px; margin: auto; }
+nav ul { display: flex; list-style: none; gap: 20px; }
+nav ul li a { color: white; text-decoration: none; font-weight: bold; transition: 0.3s; }
+nav ul li a:hover { color: #d35400; }
+
+.logo img { height: 60px; width: auto; transition: 0.3s; }
+.logo img:hover { transform: scale(1.1); }
+
+/* HERO */
+.hero { height: 100vh; background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('imagenes/hero.webp'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; color: white; text-align: center; }
+.nombre-empresa { font-size: 3.5rem; text-transform: uppercase; letter-spacing: 5px; }
+.nombre-empresa span { color: #d35400; }
+
+/* BOTONES GENERALES */
+.btn { display: inline-block; background-color: #d35400; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 20px; border: none; cursor: pointer; transition: 0.3s; }
+.btn:hover { background-color: #e67e22; transform: translateY(-3px); }
+
+/* SERVICIOS */
+#servicios { padding: 80px 20px; text-align: center; }
+.servicios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; max-width: 1200px; margin-inline: auto; }
+.card { background: white; padding: 40px 20px; border-radius: 12px; border-top: 5px solid #d35400; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.3s; }
+.card:hover { transform: translateY(-10px); }
+
+/* GALERIA */
+.galeria-seccion { padding: 60px 0; background: #fff; text-align: center; }
+.galeria-contenedor {
+    display: grid;
+    /* Esto permite que entren 3 fotos si hay espacio, o se acomoden solas si no */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+.foto { position: relative; height: 350px; overflow: hidden; border-radius: 10px; cursor: pointer; }
+.foto img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+.foto:hover img { transform: scale(1.1); }
+.overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(211, 84, 0, 0.8); display: flex; justify-content: center; align-items: center; opacity: 0; transition: 0.3s; z-index: 10; color: white; }
+.foto:hover .overlay { opacity: 1; }
+
+/* INSTAGRAM CTA */
+.instagram-cta { background-color: #222; padding: 80px 20px; text-align: center; border-top: 4px solid #d35400; }
+.cta-content h2 { color: white; margin: 15px 0; }
+.cta-content p { color: #bbb; margin-bottom: 25px; }
+
+@keyframes flotarLogo {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+}
+.icono-flotante { display: inline-block; font-size: 4rem; color: #d35400; animation: flotarLogo 3s ease-in-out infinite; }
+
+.btn-instagram { display: inline-block; padding: 12px 25px; background-color: #d35400; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; transition: 0.3s; }
+.btn-instagram:hover { transform: scale(1.1); background-color: #e67e22; box-shadow: 0 5px 15px rgba(211, 84, 0, 0.4); }
+
+/* WHATSAPP */
+.whatsapp-flotante { position: fixed; width: 60px; height: 60px; bottom: 20px; right: 20px; background-color: #25d366; border-radius: 50%; display: flex; justify-content: center; align-items: center; z-index: 2000; transition: 0.3s; }
+.whatsapp-flotante:hover { transform: scale(1.1); }
+.whatsapp-flotante img { width: 35px; }
+
+.btn-whatsapp { display: inline-flex; align-items: center; background-color: #25d366; color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+.btn-whatsapp:hover { background-color: #128c7e; transform: scale(1.05); }
+
+/* FORMULARIO */
+.contacto-seccion { padding: 80px 20px; text-align: center; }
+.formulario { max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 15px; }
+.formulario input, .formulario textarea { padding: 15px; border: 2px solid #ddd; border-radius: 8px; outline: none; transition: 0.3s; }
+.formulario input:focus, .formulario textarea:focus { border-color: #d35400; }
+
+/* LIGHTBOX */
+.lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 5000; justify-content: center; align-items: center; }
+#img-ampliada { max-width: 90%; max-height: 80vh; border: 3px solid white; }
+.flecha { position: absolute; background: none; border: none; color: white; font-size: 3rem; cursor: pointer; }
+.izq { left: 20px; } .der { right: 20px; }
+.cerrar-lightbox { position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; cursor: pointer; }
+
+.sobre-nosotros {
+    padding: 80px 20px;
+    background-color: #ffffff;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centra el contenedor hijo */
+}
+
+.descripcion-container {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto; /* Refuerza el centrado */
+    text-align: center; /* Centra todos los textos (h2, p, spans) */
+}
+
+.descripcion-texto p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: center; /* Asegura que los párrafos largos no se alineen a la izquierda */
+}
+
+.puntos-clave {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+.puntos-clave span {
+    background-color: #393939; /* Color gris oscuro del header */
+    color: #ffffff;            /* Texto blanco */
+    padding: 10px 25px;        /* Espaciado interno para dar forma */
+    border-radius: 50px;       /* Esto crea el efecto óvalo/cápsula */
+    font-size: 0.95rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Una pequeña sombra para dar relieve */
+}
+
+/* El tilde naranja */
+.puntos-clave i {
+    color: #d35400;            /* Tu naranja característico */
+    margin-right: 10px;        /* Espacio entre el tilde y el texto */
+    font-size: 1.1rem;
+}
+
+.cobertura {
+    background-color: #ffffff;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.container-cobertura {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.cobertura h2 {
+    color: #333;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.cobertura h2 i {
+    color: #d35400; /* Tu naranja */
+    margin-right: 12px;
+}
+
+.zonas-grid {
+    display: flex;
+    flex-wrap: wrap;       /* Permite que las cajas bajen a la siguiente fila */
+    justify-content: center; /* ¡Acá está la magia! Centra las cajas de cada fila */
+    gap: 20px;             /* Espacio entre las cajas */
+    max-width: 1000px;     /* Para que no se estiren al infinito en pantallas grandes */
+    margin: 0 auto;
+}
+
+.zona-item {
+    /* Le damos un ancho fijo o base para que todas sean iguales */
+    /* Calculamos un 30% para que entren 3 por fila (restando el espacio del gap) */
+    flex: 0 1 calc(33.33% - 20px); 
+    min-width: 250px; /* Evita que se hagan demasiado flacas */
+    
+    /* El resto de tus estilos (.zona-item) se mantienen igual */
+    background: #fdf2e9;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fad7bc;
+    color: #d35400;
+}
+
+.zona-item:hover {
+    transform: translateY(-5px);
+    background-color: #fad7bc;
+    box-shadow: 0 6px 12px rgba(211, 84, 0, 0.1);
+}
+
+.consulta-zonas {
+    font-style: italic;
+    color: #777;
+    margin-top: 25px;
+    font-size: 0.95rem;
+}
+
+footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 60px 20px 30px; /* Más espacio arriba */
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 1.4rem; /* Un poco más grande para que se lea bien */
+    margin-bottom: 25px;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+footer p strong {
+    color: #25d366; /* El verde de WhatsApp en el texto también */
+    font-weight: 700;
+}
+
+/* El botón de WhatsApp dentro del footer */
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25d366;
+    color: white;
+    padding: 18px 40px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp:hover {
+    background-color: #128c7e;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+}
+
+/* El icono de WhatsApp antes del texto (usando FontAwesome) */
+.btn-whatsapp::before {
+    content: '\f232'; /* Código de WhatsApp en FontAwesome */
+    font-family: "Font Awesome 5 Brands";
+    margin-right: 12px;
+    font-size: 1.5rem;
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Esto se activa cuando la pantalla mide menos de 768px (celulares y tablets) */
+@media (max-width: 768px) {
+    
+    /* Achicamos los títulos para que no ocupen toda la pantalla */
+    h1 {
+        font-size: 2.2rem !important;
+    }
+
+    h2 {
+        font-size: 1.8rem !important;
+    }
+
+    /* La cuadrícula de fotos: de 3 columnas pasamos a 1 para que se vean grandes */
+    .galeria-contenedor {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    /* El menú de navegación: lo centramos */
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 0;
+    }
+
+    /* Ajustamos el padding de las secciones para que no sobre tanto espacio */
+    section {
+        padding: 40px 15px;
+    }
+
+    /* El formulario: que ocupe el 100% del ancho disponible */
+    .formulario {
+        width: 100%;
+        padding: 20px;
+    }
+
+    /* La cuadrícula de cobertura: 2 columnas en vez de 3 */
+    .zonas-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+}
+
+.vader-opcionales {
+    margin: 15px 0;
+    text-align: left; /* Para que queden alineados a la izquierda */
+}
+
+.vader-opcion {
+    display: block; /* Hace que cada opción ocupe un renglón */
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.vader-opcion input {
+    margin-right: 10px; /* Separa el cuadradito del texto */
+    transform: scale(1.2); /* Los hace un poquito más grandes para que sea fácil tocarlos */
+}

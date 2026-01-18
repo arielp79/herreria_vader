@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herrería Artesanal | Herrería Vader</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="imagenes/logo naranja.png" alt="Logo Herrería Vader">
+            </div>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#galeria">Trabajos</a></li>
+                <li><a href="#contacto-form">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="inicio">
+        <div class="hero-content" data-aos="fade-up">
+            <h1 class="nombre-empresa">HERRERÍA <span>Vader</span></h1>
+            <p class="subtitulo-hero">Soluciones en Hierro a Medida</p>
+            <a href="#contacto-form" class="btn">Presupuesto sin cargo</a>
+        </div>
+    </section>
+
+    <section class="sobre-nosotros">
+        <div class="descripcion-container" data-aos="fade-up">
+            <div class="descripcion-texto">
+                <h2>Pasión por el Hierro y la Precisión</h2>
+                <p>En <strong>Herrería Vader</strong>, transformamos el metal en soluciones duraderas para tu hogar o empresa. Con años de experiencia en el Alto Valle, nos especializamos en trabajos personalizados que combinan seguridad, funcionalidad y diseño.</p>
+                <p>Desde estructuras industriales hasta detalles artesanales, cada proyecto es tratado con la misma rigurosidad técnica, garantizando terminaciones de alta calidad y cumplimiento en los tiempos de entrega.</p>
+                
+                <div class="puntos-clave">
+                    <span><i class="fas fa-check"></i> Diseños a medida</span>
+                    <span><i class="fas fa-check"></i> Materiales de primera</span>
+                    <span><i class="fas fa-check"></i> Atención personalizada</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios">
+        <h2 data-aos="fade-up">Nuestros Servicios</h2>
+        <div class="servicios-grid">
+            <div class="card" data-aos="zoom-in" data-aos-delay="100">
+                <h3>Seguridad</h3>
+                <p>Rejas, portones levadizos y cerramientos perimetrales.</p>
+            </div>
+            <div class="card" data-aos="zoom-in" data-aos-delay="200">
+                <h3>Estructuras</h3>
+                <p>Techos, tinglados y escaleras metálicas.</p>
+            </div>
+            <div class="card" data-aos="zoom-in" data-aos-delay="300">
+                <h3>Decoración</h3>
+                <p>Muebles estilo industrial y herrería artística.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="galeria-seccion">
+        <h2 data-aos="fade-up">Nuestros Trabajos</h2>
+        <p class="subtitulo-galeria" data-aos="fade-up">Calidad y detalle en cada proyecto</p>
+        <div class="galeria-contenedor">
+            <div class="foto" data-aos="fade-up">
+                <img src="imagenes/tinglado-final.jpg" class="foto-galeria" data-grupo="tinglado" alt="Tinglado">
+                <div class="overlay"><span>VER PROCESO <br><small>+4 FOTOS</small></span></div>
+                <img src="imagenes/tinglado-proceso1.jpg" class="foto-galeria" data-grupo="tinglado" style="display:none">
+                <img src="imagenes/tinglado-proceso2.jpg" class="foto-galeria" data-grupo="tinglado" style="display:none">
+                <img src="imagenes/tinglado-proceso3.jpg" class="foto-galeria" data-grupo="tinglado" style="display:none">
+                <img src="imagenes/tinglado-proceso4.jpg" class="foto-galeria" data-grupo="tinglado" style="display:none">
+            </div>
+            <div class="foto" data-aos="fade-up" data-aos-delay="100">
+                <img src="imagenes/reja-final.jpg" class="foto-galeria" data-grupo="reja" alt="Reja">
+                <div class="overlay"><span>VER PROCESO <br><small>+5 FOTOS</small></span></div>
+                <img src="imagenes/reja-proceso1.jpg" class="foto-galeria" data-grupo="reja" style="display:none">
+                <img src="imagenes/reja-proceso2.jpg" class="foto-galeria" data-grupo="reja" style="display:none">
+                <img src="imagenes/reja-proceso3.jpg" class="foto-galeria" data-grupo="reja" style="display:none">
+                <img src="imagenes/reja-proceso4.jpg" class="foto-galeria" data-grupo="reja" style="display:none">
+                <img src="imagenes/reja-proceso5.jpeg" class="foto-galeria" data-grupo="reja" style="display:none">
+            </div>
+            <div class="foto" data-aos="fade-up" data-aos-delay="200">
+                <img src="imagenes/mueble-final.jpg" class="foto-galeria" data-grupo="mueble" alt="Mueble Estilo Industrial">
+                <div class="overlay"><span>VER PROCESO <br> <small>+2 FOTOS</small></span></div>
+                <img src="imagenes/mueble-proceso1.jpg" class="foto-galeria" data-grupo="mueble" style="display:none">
+                <img src="imagenes/mueble-proceso2.jpg" class="foto-galeria" data-grupo="mueble" style="display:none">
+            </div>
+        </div>
+    </section>
+
+    <section class="instagram-cta">
+        <div class="cta-content" data-aos="zoom-in">
+            <i class="fab fa-instagram icono-flotante"></i>
+            <h2>¿Querés ver nuestros últimos trabajos?</h2>
+            <p>Subimos fotos reales todos los días.</p>
+            <a href="https://www.instagram.com/vaderservicios" target="_blank" rel="noopener" class="btn-instagram">@VADERSERVICIOS</a>
+        </div>
+    </section>
+
+    <section class="cobertura">
+        <div class="container-cobertura" data-aos="fade-up">
+            <h2><i class="fas fa-map-marker-alt"></i> Zonas de Cobertura</h2>
+            <p>Realizamos mediciones, traslados e instalaciones en:</p>
+            
+            <div class="zonas-grid">
+                <div class="zona-item"><strong>Cipolletti</strong></div>
+                <div class="zona-item"><strong>Neuquén Capital</strong></div>
+                <div class="zona-item"><strong>Plottier</strong></div>
+                <div class="zona-item"><strong>Centenario</strong></div>
+                <div class="zona-item"><strong>Fernández Oro</strong></div>
+            </div>
+            
+            <p class="consulta-zonas">* Consultar por otras localidades del Alto Valle.</p>
+        </div>
+    </section>
+
+    <section id="contacto-form" class="contacto-seccion">
+        <h2 data-aos="fade-up">Pedí tu Presupuesto</h2>
+        <form class="formulario" id="miFormulario" data-aos="fade-up">
+            <input type="text" id="nombre" name="nombre" placeholder="Tu Nombre" required>
+            <input type="email" id="email" name="email" placeholder="Tu Correo" required>
+            <textarea id="mensaje" name="mensaje" placeholder="Detalles del trabajo..." rows="5" required></textarea>
+            
+            <button type="submit" class="btn">Enviar Consulta ahora</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-content" data-aos="fade-up">
+            <p>¿Tenés un proyecto en mente? <br> <strong>Consultanos por WhatsApp</strong></p>
+            <a href="https://wa.me/542995347581" class="btn-whatsapp" target="_blank">
+                Enviar Mensaje
+            </a>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Herrería Vader - Soluciones en Hierro</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/542995347581" class="whatsapp-flotante" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <div id="visor" class="lightbox">
+        <span class="cerrar-lightbox" onclick="cerrarVisor()">&times;</span>
+        <button class="flecha izq" onclick="cambiarFoto(-1, event)">&#10094;</button>
+        <img id="img-ampliada">
+        <button class="flecha der" onclick="cambiarFoto(1, event)">&#10095;</button>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
